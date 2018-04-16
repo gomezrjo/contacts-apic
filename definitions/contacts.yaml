@@ -1,0 +1,464 @@
+paths:
+  /Contacts:
+    post:
+      tags:
+        - Contacts
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Contacts.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Contacts'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Contacts'
+      deprecated: false
+    put:
+      tags:
+        - Contacts
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: Contacts.upsert__put_Contacts
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Contacts'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Contacts'
+      deprecated: false
+    patch:
+      tags:
+        - Contacts
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: Contacts.upsert__patch_Contacts
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Contacts'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Contacts'
+      deprecated: false
+    get:
+      tags:
+        - Contacts
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Contacts.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Contacts'
+      deprecated: false
+  /Contacts/replaceOrCreate:
+    post:
+      tags:
+        - Contacts
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: Contacts.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Contacts'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Contacts'
+      deprecated: false
+  /Contacts/upsertWithWhere:
+    post:
+      tags:
+        - Contacts
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: Contacts.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Contacts'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Contacts'
+      deprecated: false
+  '/Contacts/{id}/exists':
+    get:
+      tags:
+        - Contacts
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Contacts.exists__get_Contacts_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/Contacts/{id}':
+    head:
+      tags:
+        - Contacts
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Contacts.exists__head_Contacts_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Contacts
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Contacts.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Contacts'
+      deprecated: false
+    delete:
+      tags:
+        - Contacts
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Contacts.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - Contacts
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Contacts.prototype.updateAttributes__put_Contacts_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Contacts'
+        - name: id
+          in: path
+          description: Contacts id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Contacts'
+      deprecated: false
+    patch:
+      tags:
+        - Contacts
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Contacts.prototype.updateAttributes__patch_Contacts_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Contacts'
+        - name: id
+          in: path
+          description: Contacts id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Contacts'
+      deprecated: false
+  '/Contacts/{id}/replace':
+    post:
+      tags:
+        - Contacts
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: Contacts.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Contacts'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Contacts'
+      deprecated: false
+  /Contacts/findOne:
+    get:
+      tags:
+        - Contacts
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Contacts.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Contacts'
+      deprecated: false
+  /Contacts/update:
+    post:
+      tags:
+        - Contacts
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Contacts.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Contacts'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /Contacts/count:
+    get:
+      tags:
+        - Contacts
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Contacts.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+definitions:
+  Contacts:
+    properties:
+      email:
+        maxLength: 40
+        type: string
+      fname:
+        maxLength: 255
+        type: string
+      lname:
+        maxLength: 255
+        type: string
+      phone:
+        maxLength: 20
+        type: string
+      street:
+        maxLength: 40
+        type: string
+      city:
+        maxLength: 40
+        type: string
+      zipcode:
+        maxLength: 20
+        type: string
+    required:
+      - email
+    additionalProperties: false
+  x-any:
+    properties: {}
+basePath: /api
+swagger: '2.0'
+info:
+  x-ibm-name: contacts
+  version: 1.0.0
+  title: contacts
+schemes:
+  - https
+host: $(catalog.host)
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  clientIdHeader:
+    type: apiKey
+    in: header
+    name: X-IBM-Client-Id
+  clientSecretHeader:
+    in: header
+    name: X-IBM-Client-Secret
+    type: apiKey
+security:
+  - clientIdHeader: []
+    clientSecretHeader: []
+x-ibm-configuration:
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  catalogs:
+    apic-dev:
+      properties:
+        runtime-url: $(TARGET_URL)
+    sb:
+      properties:
+        runtime-url: >-
+          https://apiconnect-3479cba9-8ef6-4bbc-b950-40571e7af46d.joelgomezusibmcom-demo.apic.mybluemix.net
+        invoke-tls-profile: 'client:Loopback-client'
+  assembly:
+    execute:
+      - invoke:
+          target-url: $(runtime-url)$(request.path)$(request.search)
+          tls-profile: $(invoke-tls-profile)
+  properties:
+    runtime-url:
+      value: ''
+      description: ''
+      encoded: false
+    invoke-tls-profile:
+      value: ''
+      description: ''
+      encoded: false
+  gateway: datapower-gateway

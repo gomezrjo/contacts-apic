@@ -1,0 +1,11 @@
+{
+  "mysqldb": {
+    "host": "ec2-52-91-140-83.compute-1.amazonaws.com",
+    "port": 3306,
+    "database": "appconn",
+    "password": "P@ssw0rd!",
+    "name": "mysqldb",
+    "connector": "mysql",
+    "user": "dbuser"
+  }
+}
