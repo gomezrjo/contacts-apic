@@ -7,5 +7,9 @@
     "name": "mysqldb",
     "connector": "mysql",
     "user": "dbuser"
+  },
+  "newds": {
+    "name": "newds",
+    "connector": "memory"
   }
 }
